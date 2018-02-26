@@ -1,0 +1,6 @@
+framework module Pods_RxDataSourcesPresentationUITests {
+  umbrella header "Pods-RxDataSourcesPresentationUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

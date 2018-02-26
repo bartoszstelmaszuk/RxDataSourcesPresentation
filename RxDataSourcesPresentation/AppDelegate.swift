@@ -12,9 +12,28 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    private let tabBarController = UITabBarController()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.backgroundColor = .black
+        window?.makeKeyAndVisible()
+        
+        let rxSwiftVC = RxDataSourceViewController()
+        let rxDataSourcesVC = RxDataSourceViewController()
+        
+        let rxSwiftImage = UIImage(named: "rxswift") ?? nil
+        let rxDataSourcesImage = UIImage(named: "rxdatasources") ?? nil
+        rxSwiftVC.tabBarItem = UITabBarItem(title: "RxSwift", image: rxSwiftImage, tag: 0)
+        rxDataSourcesVC.tabBarItem = UITabBarItem(title: "RxDataSources", image: rxDataSourcesImage, tag: 1)
+        
+        let controllers = [rxSwiftVC, rxDataSourcesVC]
+        tabBarController.viewControllers = controllers
+        
+        window?.rootViewController = self.tabBarController
+        
         // Override point for customization after application launch.
         return true
     }
