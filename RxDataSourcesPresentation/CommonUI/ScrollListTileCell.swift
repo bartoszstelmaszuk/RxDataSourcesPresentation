@@ -14,8 +14,9 @@ import RxCocoa
 final class ScrollListTileCell: UITableViewCell {
     private let tileButton = RoundedGreenButton()
     private let infoLabel = UILabel()
+    private var disposeBag = DisposeBag()
+    private var updateSelectionState: (Bool) -> Void = { _ in }
     
-    var didSelectCell: Observable<Void> { return self.tileButton.rx.tap.asObservable() }
     var isTileSelected: Bool {
         get {
             return self.tileButton.isSelected
@@ -24,10 +25,17 @@ final class ScrollListTileCell: UITableViewCell {
         }
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.disposeBag = DisposeBag()
+        self.subscribeToEvents()
+    }
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.configureSelf()
         self.configureConstraints()
+        self.subscribeToEvents()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -42,9 +50,17 @@ final class ScrollListTileCell: UITableViewCell {
         )
     }
     
-    func configure(tileText: String?, infoLabel: String) {
+    private func subscribeToEvents() {
+        self.tileButton.rx.tap.asObservable().subscribe(onNext: {
+            self.updateSelectionState(self.isTileSelected)
+        }).disposed(by: disposeBag)
+    }
+    
+    func configure(tileText: String?, infoLabel: String, isSelected: Bool, updateSelectionState: @escaping (Bool) -> Void) {
         self.tileButton.setTitle(tileText, for: .normal)
         self.infoLabel.text = infoLabel
+        self.isTileSelected = isSelected
+        self.updateSelectionState = updateSelectionState
     }
     
     private func configureSelf() {

@@ -10,13 +10,16 @@
 		3670BD7D3169D400B2431AB6 /* Pods_RxDataSourcesPresentationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4341DA1EB713EB35CBC3EA3 /* Pods_RxDataSourcesPresentationTests.framework */; };
 		55975F94DBB3C6085CEE9913 /* Pods_RxDataSourcesPresentationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA7000FD6093EE5BDB5A3C9 /* Pods_RxDataSourcesPresentationUITests.framework */; };
 		AF86ADA020444444001AAE64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86AD9F20444444001AAE64 /* AppDelegate.swift */; };
-		AF86ADA220444444001AAE64 /* rxDataSourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86ADA120444444001AAE64 /* rxDataSourcesViewController.swift */; };
+		AF86ADA220444444001AAE64 /* RxDataSourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86ADA120444444001AAE64 /* RxDataSourcesViewController.swift */; };
 		AF86ADA720444444001AAE64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF86ADA620444444001AAE64 /* Assets.xcassets */; };
 		AF86ADAA20444444001AAE64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF86ADA820444444001AAE64 /* LaunchScreen.storyboard */; };
-		AF86ADCF20446098001AAE64 /* rxDataSourcesMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86ADCE20446098001AAE64 /* rxDataSourcesMainView.swift */; };
+		AF86ADCF20446098001AAE64 /* RxDataSourcesMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86ADCE20446098001AAE64 /* RxDataSourcesMainView.swift */; };
 		AF86ADD2204461E9001AAE64 /* ScrollListTileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86ADD1204461E9001AAE64 /* ScrollListTileCell.swift */; };
 		AF86ADD42044626D001AAE64 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86ADD32044626D001AAE64 /* RoundedButton.swift */; };
 		AF86ADD7204463CE001AAE64 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86ADD6204463CE001AAE64 /* Record.swift */; };
+		AF86ADDA20458BB0001AAE64 /* RxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86ADD920458BB0001AAE64 /* RxSwiftViewController.swift */; };
+		AF86ADDC20458C92001AAE64 /* RxSwiftMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86ADDB20458C92001AAE64 /* RxSwiftMainView.swift */; };
+		AF86ADDE20458D01001AAE64 /* RxSwiftDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF86ADDD20458D01001AAE64 /* RxSwiftDataSource.swift */; };
 		C1B59D74F63E0EF71180706C /* Pods_RxDataSourcesPresentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB55EEFE3F8CFB5A13C723D /* Pods_RxDataSourcesPresentation.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,16 +49,19 @@
 		A4341DA1EB713EB35CBC3EA3 /* Pods_RxDataSourcesPresentationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxDataSourcesPresentationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF86AD9C20444444001AAE64 /* RxDataSourcesPresentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxDataSourcesPresentation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF86AD9F20444444001AAE64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF86ADA120444444001AAE64 /* rxDataSourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rxDataSourcesViewController.swift; sourceTree = "<group>"; };
+		AF86ADA120444444001AAE64 /* RxDataSourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxDataSourcesViewController.swift; sourceTree = "<group>"; };
 		AF86ADA620444444001AAE64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF86ADA920444444001AAE64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF86ADAB20444444001AAE64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF86ADB020444445001AAE64 /* RxDataSourcesPresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxDataSourcesPresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF86ADBB20444445001AAE64 /* RxDataSourcesPresentationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxDataSourcesPresentationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF86ADCE20446098001AAE64 /* rxDataSourcesMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rxDataSourcesMainView.swift; sourceTree = "<group>"; };
+		AF86ADCE20446098001AAE64 /* RxDataSourcesMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxDataSourcesMainView.swift; sourceTree = "<group>"; };
 		AF86ADD1204461E9001AAE64 /* ScrollListTileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollListTileCell.swift; sourceTree = "<group>"; };
 		AF86ADD32044626D001AAE64 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		AF86ADD6204463CE001AAE64 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		AF86ADD920458BB0001AAE64 /* RxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftViewController.swift; sourceTree = "<group>"; };
+		AF86ADDB20458C92001AAE64 /* RxSwiftMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftMainView.swift; sourceTree = "<group>"; };
+		AF86ADDD20458D01001AAE64 /* RxSwiftDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftDataSource.swift; sourceTree = "<group>"; };
 		DFB55EEFE3F8CFB5A13C723D /* Pods_RxDataSourcesPresentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxDataSourcesPresentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E275D2F23CFEAD3919CB72AC /* Pods-RxDataSourcesPresentationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxDataSourcesPresentationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxDataSourcesPresentationTests/Pods-RxDataSourcesPresentationTests.release.xcconfig"; sourceTree = "<group>"; };
 		FB007939C1FFEB4B13FC0EB8 /* Pods-RxDataSourcesPresentation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxDataSourcesPresentation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxDataSourcesPresentation/Pods-RxDataSourcesPresentation.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				AF86AD9F20444444001AAE64 /* AppDelegate.swift */,
+				AF86ADD820458B95001AAE64 /* RxSwift */,
 				AF86ADD52044631E001AAE64 /* CommonUI */,
 				AF86ADD02044609F001AAE64 /* RxDataSources */,
 				AF86ADA620444444001AAE64 /* Assets.xcassets */,
@@ -135,8 +142,8 @@
 		AF86ADD02044609F001AAE64 /* RxDataSources */ = {
 			isa = PBXGroup;
 			children = (
-				AF86ADA120444444001AAE64 /* rxDataSourcesViewController.swift */,
-				AF86ADCE20446098001AAE64 /* rxDataSourcesMainView.swift */,
+				AF86ADA120444444001AAE64 /* RxDataSourcesViewController.swift */,
+				AF86ADCE20446098001AAE64 /* RxDataSourcesMainView.swift */,
 			);
 			path = RxDataSources;
 			sourceTree = "<group>";
@@ -149,6 +156,16 @@
 				AF86ADD6204463CE001AAE64 /* Record.swift */,
 			);
 			path = CommonUI;
+			sourceTree = "<group>";
+		};
+		AF86ADD820458B95001AAE64 /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				AF86ADD920458BB0001AAE64 /* RxSwiftViewController.swift */,
+				AF86ADDB20458C92001AAE64 /* RxSwiftMainView.swift */,
+				AF86ADDD20458D01001AAE64 /* RxSwiftDataSource.swift */,
+			);
+			path = RxSwift;
 			sourceTree = "<group>";
 		};
 		CC8B7AE279024F3179687E2A /* Pods */ = {
@@ -467,9 +484,12 @@
 				AF86ADD7204463CE001AAE64 /* Record.swift in Sources */,
 				AF86ADD2204461E9001AAE64 /* ScrollListTileCell.swift in Sources */,
 				AF86ADD42044626D001AAE64 /* RoundedButton.swift in Sources */,
-				AF86ADCF20446098001AAE64 /* rxDataSourcesMainView.swift in Sources */,
-				AF86ADA220444444001AAE64 /* rxDataSourcesViewController.swift in Sources */,
+				AF86ADDE20458D01001AAE64 /* RxSwiftDataSource.swift in Sources */,
+				AF86ADCF20446098001AAE64 /* RxDataSourcesMainView.swift in Sources */,
+				AF86ADA220444444001AAE64 /* RxDataSourcesViewController.swift in Sources */,
+				AF86ADDA20458BB0001AAE64 /* RxSwiftViewController.swift in Sources */,
 				AF86ADA020444444001AAE64 /* AppDelegate.swift in Sources */,
+				AF86ADDC20458C92001AAE64 /* RxSwiftMainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

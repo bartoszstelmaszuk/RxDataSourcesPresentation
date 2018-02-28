@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 import RxDataSources
 
 class RxDataSourceViewController: UIViewController {
@@ -22,13 +23,30 @@ class RxDataSourceViewController: UIViewController {
         configureCell: { (_, _, _, _) in fatalError("Used before configured")}
     )
     
+    private let dataRelay = BehaviorRelay<[SectionOfRecords]>(value: [
+        SectionOfRecords(header: "", items: [
+            Record(tileText: "0", infoText: "aaaa", isSelected: false),
+            Record(tileText: "1", infoText: "bbbb", isSelected: false),
+            Record(tileText: "2", infoText: "cccc", isSelected: false),
+            Record(tileText: "3", infoText: "dddd", isSelected: false),
+            Record(tileText: "4", infoText: "eeee", isSelected: false),
+            Record(tileText: "5", infoText: "ffff", isSelected: false),
+            Record(tileText: "6", infoText: "gggg", isSelected: false)
+            ])
+        ])
+        
     init() {
         super.init(nibName: nil, bundle: nil)
         self.dataSource.configureCell = { (ds, tv, ip, item) in
             guard let cell = tv.dequeueReusableCell(withIdentifier: "DataSourcesCell", for: ip) as? ScrollListTileCell else {
                     return ScrollListTileCell(style: .default, reuseIdentifier: "DataSourcesCell")
             }
-            cell.configure(tileText: item.tileText, infoLabel: item.infoText)
+            cell.configure(tileText: item.tileText, infoLabel: item.infoText, isSelected: item.isSelected, updateSelectionState: { [weak self] isSelected in
+                guard let `self` = self else { return }
+                var copy = self.dataRelay.value
+                copy[0].items[ip.row].isSelected = !copy[0].items[ip.row].isSelected
+                self.dataRelay.accept(copy)
+            })
             return cell
         }
         self.subscibeToUserEvents()
@@ -43,14 +61,8 @@ class RxDataSourceViewController: UIViewController {
     }
     
     private func subscibeToUserEvents() {
-        Observable.just([
-            SectionOfRecords(header: "", items: [
-                Record(tileText: "0", infoText: "aaaa"),
-                Record(tileText: "1", infoText: "bbbb"),
-                Record(tileText: "2", infoText: "cccc"),
-                Record(tileText: "3", infoText: "dddd")
-                ])
-            ]).bind(to: self.mainView.tiledTableView.rx.items(dataSource: self.dataSource))
+        dataRelay.asObservable()
+            .bind(to: self.mainView.tiledTableView.rx.items(dataSource: self.dataSource))
             .disposed(by: disposeBag)
     }
 }

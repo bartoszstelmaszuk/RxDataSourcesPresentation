@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = .black
         window?.makeKeyAndVisible()
         
-        let rxSwiftVC = RxDataSourceViewController()
+        let rxSwiftVC = RxSwiftViewController()
         let rxDataSourcesVC = RxDataSourceViewController()
         
         let rxSwiftImage = UIImage(named: "rxswift") ?? nil

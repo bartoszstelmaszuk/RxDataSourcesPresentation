@@ -12,6 +12,7 @@ import RxDataSources
 struct Record {
     let tileText: String
     let infoText: String
+    var isSelected: Bool
 }
 
 struct SectionOfRecords {

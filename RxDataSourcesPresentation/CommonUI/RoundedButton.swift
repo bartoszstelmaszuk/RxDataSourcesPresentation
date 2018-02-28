@@ -12,8 +12,6 @@ import RxCocoa
 
 final class RoundedGreenButton: UIButton {
     
-    private let disposeBag = DisposeBag()
-    
     init() {
         super.init(frame: .zero)
         self.configure()
@@ -35,9 +33,6 @@ final class RoundedGreenButton: UIButton {
         self.contentMode = .center
         layer.cornerRadius = 8
         setupColorForState()
-        self.rx.tap.subscribe(onNext: { [unowned self] _ in
-            self.isSelected = !self.isSelected
-        }).disposed(by: disposeBag)
     }
     
     private func setupColorForState() {
