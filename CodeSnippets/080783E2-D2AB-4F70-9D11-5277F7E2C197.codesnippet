@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>p5dataRelay</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>private let dataRelay = BehaviorRelay&lt;[SectionOfRecords]&gt;(value: [
+        SectionOfRecords(header: "", items: [
+            Record(tileText: "0", infoText: "aaaa", isSelected: false),
+            Record(tileText: "1", infoText: "bbbb", isSelected: false),
+            Record(tileText: "2", infoText: "cccc", isSelected: false),
+            Record(tileText: "3", infoText: "dddd", isSelected: false),
+            Record(tileText: "4", infoText: "eeee", isSelected: false),
+            Record(tileText: "5", infoText: "ffff", isSelected: false),
+            Record(tileText: "6", infoText: "gggg", isSelected: false)
+            ])
+        ])</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>080783E2-D2AB-4F70-9D11-5277F7E2C197</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>p5dataRelay</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

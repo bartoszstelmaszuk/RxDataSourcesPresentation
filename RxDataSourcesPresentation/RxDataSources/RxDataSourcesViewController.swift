@@ -42,10 +42,10 @@ class RxDataSourceViewController: UIViewController {
                     return ScrollListTileCell(style: .default, reuseIdentifier: "DataSourcesCell")
             }
             cell.configure(tileText: item.tileText, infoLabel: item.infoText, isSelected: item.isSelected, updateSelectionState: { [weak self] isSelected in
-                guard let `self` = self else { return }
-                var copy = self.dataRelay.value
-                copy[0].items[ip.row].isSelected = !copy[0].items[ip.row].isSelected
-                self.dataRelay.accept(copy)
+                    guard let `self` = self else { return }
+                    var copy = self.dataRelay.value
+                    copy[0].items[ip.row].isSelected = !copy[0].items[ip.row].isSelected
+                    self.dataRelay.accept(copy)
             })
             return cell
         }

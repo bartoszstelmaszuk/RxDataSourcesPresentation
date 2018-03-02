@@ -22,11 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         let rxSwiftVC = RxSwiftViewController()
-        let rxDataSourcesVC = RxDataSourceViewController()
-        
         let rxSwiftImage = UIImage(named: "rxswift") ?? nil
-        let rxDataSourcesImage = UIImage(named: "rxdatasources") ?? nil
         rxSwiftVC.tabBarItem = UITabBarItem(title: "RxSwift", image: rxSwiftImage, tag: 0)
+        
+        let rxDataSourcesVC = RxDataSourceViewController()
+        let rxDataSourcesImage = UIImage(named: "rxdatasources") ?? nil
         rxDataSourcesVC.tabBarItem = UITabBarItem(title: "RxDataSources", image: rxDataSourcesImage, tag: 1)
         
         let controllers = [rxSwiftVC, rxDataSourcesVC]

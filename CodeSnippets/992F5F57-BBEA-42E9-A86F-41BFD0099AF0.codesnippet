@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>p4configureCell</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>self.dataSource.configureCell = { (ds, tv, ip, item) in
+            guard let cell = tv.dequeueReusableCell(withIdentifier: "DataSourcesCell", for: ip) as? ScrollListTileCell else {
+                    return ScrollListTileCell(style: .default, reuseIdentifier: "DataSourcesCell")
+            }
+            cell.configure(tileText: item.tileText, infoLabel: item.infoText, isSelected: item.isSelected, updateSelectionState: { [weak self] isSelected in
+            })
+            return cell
+        }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>992F5F57-BBEA-42E9-A86F-41BFD0099AF0</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>p4configureCell</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
